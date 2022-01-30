@@ -10,7 +10,7 @@ deployment:
 static:
     models: 
       kind: range
-      # min_range: 10
+      min_range: 10
       max_range: 15
       as_integer: True
     country: 
