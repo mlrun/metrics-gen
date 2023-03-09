@@ -130,7 +130,7 @@ class Generator_df:
         for mg in metric_groups_dict:
             mg_dict = dict(mg)
             row = pd.DataFrame(data=mg_dict, index=[0])
-            df = df.append(row)
+            df = pd.concat(df, row)
         # Add total is_error
         df["is_error"] = df.filter(regex=".*is_error.*").apply(
             lambda row: row.min(), axis=1
