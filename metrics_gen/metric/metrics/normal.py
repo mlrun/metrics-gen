@@ -12,7 +12,7 @@ def Normal(mu=0, sigma=0.5, noise=0):
     """
     # while True:
     added_noise = 0
-    if noise is not 0:
+    if noise != 0:
         added_noise = np.random.normal(loc=0, scale=noise, size=1)
     tick = np.random.normal(loc=mu, scale=sigma, size=1) + added_noise
     return tick
