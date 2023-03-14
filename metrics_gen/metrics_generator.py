@@ -126,11 +126,12 @@ class Generator_df:
     def transform_metric_groups_dict_to_df(self, metric_groups_dict: dict):
         df = pd.DataFrame()
 
+
         # Add columns
         for mg in metric_groups_dict:
             mg_dict = dict(mg)
             row = pd.DataFrame(data=mg_dict, index=[0])
-            df = pd.concat(df, row)
+            df = pd.concat([df, row])
         # Add total is_error
         df["is_error"] = df.filter(regex=".*is_error.*").apply(
             lambda row: row.min(), axis=1
