@@ -3,6 +3,8 @@ import pandas as pd
 import faker
 from .deployment import providers
 from dataclasses import dataclass
+from typing import List
+
 
 
 @dataclass
@@ -185,12 +187,12 @@ class deployment_generator:
         return False
 
     def _extract_columns_from_configuration(
-        self, configuration: list[Deployment_level]
+        self, configuration: List[Deployment_level]
     ):
         return list(map(lambda levels: levels.name, configuration))
 
     def _add_column_to_sample(
-        self, current: list[Deployment_level], left: list[Deployment_level]
+        self, current: List[Deployment_level], left: List[Deployment_level]
     ):
         """Generates the data for each column as defined in the list
 
