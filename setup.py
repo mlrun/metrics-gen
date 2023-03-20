@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="metrics_gen",
-    version="0.2.1",
+    version="0.2.2",
     author="Avi Asulin",
     author_email="avia@iguazio.com",
     description="Fake deployment and data generator",
